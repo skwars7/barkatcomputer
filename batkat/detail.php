@@ -1,3 +1,6 @@
+<?php
+include_once("detailcnt.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -35,318 +38,19 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+        <style>
+        .fa-disabled{
+        	opacity: 0.6;
+        	cursor:not-allowed;
+        }
+        </style>
 
 	</head>
     <body class="cnt-home">
 		<!-- ============================================== HEADER ============================================== -->
-<header class="header-style-1">
-	<div class="main-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-					<!-- ============================================================= LOGO ============================================================= -->
-					<div class="logo">
-						<a href="index.php" style="color: white;">
-							<span style="font-size:25px; color: whitesmoke; font-family:sans-serif;">BarkatComputers</span>
-						</a>
-					</div>
-				</div><!-- /.logo-holder -->
-				<!-- <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
-					<div class="search-area">
-					    <form>
-					        <div class="control-group">
-
-					            <ul class="categories-filter animate-dropdown">
-					                <li class="dropdown">
-
-					                    <a class="dropdown-toggle"  data-toggle="dropdown" href="category.php">Categories <b class="caret"></b></a>
-
-					                    <ul class="dropdown-menu" role="menu" >
-					                        <li class="menu-header">Computer</li>
-					                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- Clothing</a></li>
-					                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- Electronics</a></li>
-					                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- Shoes</a></li>
-					                        <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- Watches</a></li>
-
-					                    </ul>
-					                </li>
-					            </ul>
-
-					            <input class="search-field" placeholder="Search here..." />
-
-					            <a class="search-button" href="#" ></a>    
-
-					        </div>
-					    </form>
-					</div><!-- /.search-area ->
-				</div> --><!-- /.top-search-holder -->
-				<div class="col-xs-12 col-sm-12 col-md-2 pull-right animate-dropdown top-cart-row">
-					<div class="dropdown dropdown-cart">
-						<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-							<div class="items-cart-inner">
-				            <div class="basket">
-									<i class="glyphicon glyphicon-shopping-cart"></i>
-								</div>
-								<div class="basket-item-count"><span class="count">2</span></div>
-								<div class="total-price-basket">
-									<span class="lbl">cart -</span>
-									<span class="total-price">
-										<span class="sign">₹</span><span class="value">600.00</span>
-									</span>
-								</div>
-								
-							
-						    </div>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<div class="cart-item product-summary">
-									<div class="row">
-										<div class="col-xs-4">
-											<div class="image">
-												<a href="detail.php"><img src="assets/images/cart.jpg" alt=""></a>
-											</div>
-										</div>
-										<div class="col-xs-7">
-											
-											<h3 class="name"><a href="index.php?page-detail">Simple Product</a></h3>
-											<div class="price">₹600.00</div>
-										</div>
-										<div class="col-xs-1 action">
-											<a href="#"><i class="fa fa-trash"></i></a>
-										</div>
-									</div>
-								</div><!-- /.cart-item -->
-								<div class="clearfix"></div>
-							<hr>
-						
-							<div class="clearfix cart-total">
-								<div class="pull-right">
-									
-										<span class="text">Sub Total :</span><span class='price'>₹600.00</span>
-										
-								</div>
-								<div class="clearfix"></div>
-									
-								<a href="checkout.php" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>	
-							</div><!-- /.cart-total-->
-									
-								
-						</li>
-						</ul><!-- /.dropdown-menu-->
-					</div><!-- /.dropdown-cart -->
-				</div><!-- /.top-cart-row -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</div>
-	<div class="header-nav animate-dropdown">
-	    <div class="container">
-	        <div class="yamm navbar navbar-default" role="navigation">
-	            <div class="navbar-header">
-	                <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	            </div>
-	            <div class="nav-bg-class">
-	                <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
-						<div class="nav-outer">
-							<ul class="nav navbar-nav">
-								<li class="active dropdown yamm-fw">
-									<a href="home.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-								</li>
-								<li class="dropdown yamm mega-menu">
-									<a href="home.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Hardware</a>
-	             				   <ul class="dropdown-menu container">
-										<li>
-				               				<div class="yamm-content ">
-				            					<div class="row"><!-- /.yamm-content -->					
-							                   		<div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-											                <h2 class="title">Laptops</h2>
-											                <ul class="links">
-											                   <li><a href="#">Gaming</a></li>
-											                   <li><a href="#">Laptop Skins</a></li>
-											                    <li><a href="#">Apple</a></li>
-											                    <li><a href="#">Dell</a></li>
-											                    <li><a href="#">Lenovo</a></li>
-											                    <li><a href="#">Microsoft</a></li>
-											                    <li><a href="#">Asus</a></li>
-											                     <li><a href="#">Adapters</a></li>
-											                     <li><a href="#">Batteries</a></li>
-											                     <li><a href="#">Cooling Pads</a></li>
-											                </ul>
-											            </div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="dropdown mega-menu">
-									<a href="category.php"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Peripheral
-										<!-- <span class="menu-label hot-menu hidden-xs">hot</span>-->									
-									</a>
-					                <ul class="dropdown-menu container">
-										<li>
-											<div class="yamm-content">
-											    <div class="row">
-											           <!-- /.col -->
-
-											            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-											                <h2 class="title">Desktops</h2>
-											                <ul class="links">
-											                    <li><a href="#">Routers & Modems</a></li>
-											                    <li><a href="#">CPUs, Processors</a></li>
-											                    <li><a href="#">PC Gaming Store</a></li>
-											                    <li><a href="#">Graphics Cards</a></li>
-											                    <li><a href="#">Components</a></li>
-											                    <li><a href="#">Webcam</a></li>
-											                    <li><a href="#">Memory (RAM)</a></li>
-											                    <li><a href="#">Motherboards</a></li>
-											                    <li><a href="#">Keyboards</a></li>
-											                    <li><a href="#">Headphones</a></li>
-											                </ul>
-											            </div><!-- /.col -->
-											           <!--  <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-											                <h2 class="title">Mobile Phones</h2>
-											                <ul class="links">
-											                    <li><a href="#">Apple</a></li>
-											                    <li><a href="#">Samsung</a></li>
-											                    <li><a href="#">Lenovo</a></li>
-											                    <li><a href="#">Motorola</a></li>
-											                    <li><a href="#">LeEco</a></li>
-											                    <li><a href="#">Asus</a></li>
-											                    <li><a href="#">Acer</a></li>
-											                    <li><a href="#">Accessories</a></li>
-											                    <li><a href="#">Headphones</a></li>
-											                     <li><a href="#">Memory Cards</a></li>
-											                </ul>
-											            </div> -->
-											            <!-- 
-											             <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
-											             <a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a>
-											             </div> -->
-											    </div><!-- /.row -->
-											</div><!-- /.yamm-content -->					
-										</li>
-									</ul>
-								</li>
-								<li class="dropdown  mega-menu hidden-sm">
-									<a href="category.php"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">CCTV
-											<!-- <span class="menu-label hot-menu hidden-xs">hot</span>-->
-									</a>
-					                <ul class="dropdown-menu container">
-										<li>
-											<div class="yamm-content">
-											    <div class="row">
-
-											            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-											                <h2 class="title">Cameras</h2>
-											                <ul class="links">
-											                    <li><a href="#">Accessories</a></li>
-											                    <li><a href="#">Binoculars</a></li>
-											                    <li><a href="#">Telescopes</a></li>
-											                    <li><a href="#">Camcorders</a></li>
-											                    <li><a href="#">Digital</a></li>
-											                     <li><a href="#">Film Cameras</a></li>
-											                     <li><a href="#">Flashes</a></li>
-											                     <li><a href="#">Lenses</a></li>
-											                     <li><a href="#">Surveillance</a></li>
-											                      <li><a href="#">Tripods</a></li>
-											                     
-											                </ul>
-											            </div><!-- /.col -->
-											           <!--  <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-											                <h2 class="title">Mobile Phones</h2>
-											                <ul class="links">
-											                    <li><a href="#">Apple</a></li>
-											                    <li><a href="#">Samsung</a></li>
-											                    <li><a href="#">Lenovo</a></li>
-											                    <li><a href="#">Motorola</a></li>
-											                    <li><a href="#">LeEco</a></li>
-											                    <li><a href="#">Asus</a></li>
-											                    <li><a href="#">Acer</a></li>
-											                    <li><a href="#">Accessories</a></li>
-											                    <li><a href="#">Headphones</a></li>
-											                     <li><a href="#">Memory Cards</a></li>
-											                </ul>
-											            </div> -->
-											            <!-- 
-											             <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner">
-											             <a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a>
-											             </div> -->
-											    </div><!-- /.row -->
-											</div><!-- /.yamm-content -->					
-										</li>
-									</ul>
-								</li>
-											<!-- 
-								<li class="dropdown hidden-sm">
-									<a href="category.php">Watches</a>
-								</li>
-
-								<li class="dropdown">
-									<a href="contact.php">Jewellery</a>
-								</li>
-					            
-					            <li class="dropdown">
-									<a href="contact.php">Shoes</a>
-								</li>
-					            <li class="dropdown">
-									<a href="contact.php">Kids & Girls</a>
-								</li>
-								
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>
-									<ul class="dropdown-menu pages">
-										<li>
-											<div class="yamm-content">
-												<div class="row">
-													
-														<div class="col-xs-12 col-menu">
-						                                  <ul class="links">
-							                                  	<li><a href="home.php">Home</a></li>
-																<li><a href="category.php">Category</a></li>
-																<li><a href="detail.php">Detail</a></li>
-																<li><a href="shopping-cart.php">Shopping Cart Summary</a></li>
-					                                            <li><a href="checkout.php">Checkout</a></li>
-																<li><a href="blog.php">Blog</a></li>
-																<li><a href="blog-details.php">Blog Detail</a></li>
-																<li><a href="contact.php">Contact</a></li>
-					                                            <li><a href="sign-in.php">Sign In</a></li>
-																<li><a href="my-wishlist.php">Wishlist</a></li>
-																<li><a href="terms-conditions.php">Terms and Condition</a></li>
-																<li><a href="track-orders.php">Track Orders</a></li>
-																<li><a href="product-comparison.php">Product-Comparison</a></li>
-							                                  	<li><a href="faq.php">FAQ</a></li>
-																<li><a href="404.php">404</a></li>
-																
-						                                  </ul>
-														</div>
-														
-														
-													
-												</div>
-											</div>
-										</li>
-					                    
-					                   
-										
-									</ul>
-								</li> -->
-					             <!-- <li class="dropdown  navbar-right special-menu">
-									<a href="#">Todays offer</a>
-								</li> -->
-							</ul><!-- /.navbar-nav -->
-							<div class="clearfix"></div>				
-						</div><!-- /.nav-outer -->
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.nav-bg-class -->
-	        </div><!-- /.navbar-default -->
-	    </div><!-- /.container-class -->
-	</div><!-- /.header-nav -->
-</header>
+<?php
+	include_once("header.php");
+?>
 
 <!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
@@ -365,256 +69,180 @@
 		<div class='row single-product'>
 			<div class='col-md-3 sidebar'>
 				<div class="sidebar-module-container">
-				<div class="home-banner outer-top-n">
-<img src="assets/images/banners/LHS-banner.jpg" alt="Image">
-</div>		
-  
-    
-    
-    	<!-- ============================================== HOT DEALS ============================================== -->
-
-    
-<!-- ============================================== Testimonials: END ============================================== -->
-
- 
-
+					<div class="home-banner outer-top-n">
+						<img src="assets/images/banners/LHS-banner.jpg" alt="Image">
+					</div>
 				</div>
 			</div><!-- /.sidebar -->
 			<div class='col-md-9'>
-            <div class="detail-block">
-				<div class="row  wow fadeInUp">
-                
-					     <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
-    <div class="product-item-holder size-big single-product-gallery small-gallery">
-
-        <div id="owl-single-product">
-            <div class="single-product-gallery-item" id="slide1">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p8.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p8.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide2">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p9.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p9.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide3">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p10.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p10.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide4">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p11.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p11.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide5">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p12.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p12.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide6">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p13.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p13.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide7">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p14.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p14.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide8">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p15.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p15.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-            <div class="single-product-gallery-item" id="slide9">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p16.jpg">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p16.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-
-        </div><!-- /.single-product-slider -->
-
-
-        <div class="single-product-gallery-thumbs gallery-thumbs">
-
-            <div id="owl-single-product-thumbnails">
-                <div class="item">
-                    <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="1" href="#slide1">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p17.jpg" />
-                    </a>
-                </div>
-
-                <div class="item">
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide2">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p18.jpg"/>
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3" href="#slide3">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p19.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="4" href="#slide4">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p20.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="5" href="#slide5">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p21.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="6" href="#slide6">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p22.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="7" href="#slide7">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p23.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="8" href="#slide8">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p24.jpg" />
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="9" href="#slide9">
-                        <img class="img-responsive" width="85" alt="" src="assets/images/blank.gif" data-echo="assets/images/products/p25.jpg" />
-                    </a>
-                </div>
-            </div><!-- /#owl-single-product-thumbnails -->
-
-            
-
-        </div><!-- /.gallery-thumbs -->
-
-    </div><!-- /.single-product-gallery -->
-</div><!-- /.gallery-holder -->        			
-					<div class='col-sm-6 col-md-7 product-info-block'>
-						<div class="product-info">
-							<h1 class="name">Floral Print Buttoned</h1>
-							
-							<div class="rating-reviews m-t-20">
-								<div class="row">
-									<div class="col-sm-3">
-										
-									</div>
-									<div class="col-sm-8">
-										<div class="reviews">
-										
-										</div>
-									</div>
-								</div><!-- /.row -->		
-							</div><!-- /.rating-reviews -->
-
-							<div class="stock-container info-container m-t-10">
-								<div class="row">
-									<div class="col-sm-2">
-										<div class="stock-box">
-											<span class="label">Availability :</span>
-										</div>	
-									</div>
-									<div class="col-sm-9">
-										<div class="stock-box">
-											<span class="value">In Stock</span>
-										</div>	
-									</div>
-								</div><!-- /.row -->	
-							</div><!-- /.stock-container -->
-
-							
-							<div class="price-container info-container m-t-20">
-								<div class="row">
-									
-
-									<div class="col-sm-6">
-										<div class="price-box">
-											<span class="price">₹800.00</span>
-											<span class="price-strike">₹900.00</span>
-										</div>
-									</div>
-
-									<div class="col-sm-6">
-										<div class="favorite-button m-t-10">
-											<a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="#">
-											    <i class="fa fa-heart"></i>
-											</a>
+	            <div class="detail-block">
+					<div class="row  wow fadeInUp">
+	                	<div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
+						    <div class="product-item-holder size-big single-product-gallery small-gallery">
+								<div id="owl-single-product">
+									<div class="" id="slide1">
+						           		<a data-lightbox="image-2" data-title="Gallery" href="../src/images/products/<?php echo $data[0]->ImageURL ; ?>">
+						                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" style="height:280px; width: 200px; "/>
+						                </a>
+						            </div>
+									<?php
+									 $i=1;
+										foreach ($data as $d) {
+											$i = $i+1;
+											?>
+									            <div class="" id="<?php echo 'slide'.$i; ?>">
+									           		<a data-lightbox="<?php echo 'image-'.$i; ?>" data-title="Gallery" href="../src/images/products/<?php echo $d->ImageURL ; ?>">
+									                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $d->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $d->ImageURL ; ?>" style="height:280px; width: 200px; "/>
+									                </a>
+									            </div>
+								            <?php
+										}
+									?>
+								</div>
+								<div class="single-product-gallery-thumbs gallery-thumbs">
+									<div id="owl-single-product-thumbnails">
+										<?php
+											$i=0;
+											foreach ($data as $d) {
+												
+											?>
+												<div class="item">
+													<?php
+														$i = $i+1;
+													?>
+												    <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="<?php echo $i; ?>" href="<?php echo '#slide'.$i; ?>">
+								                        <img class="img-responsive" width="85" alt="" src="../src/images/products/<?php echo $d->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $d->ImageURL ; ?>" style="height: 100px; width:100px;"/>
+								                    </a>
+					              			    </div>
+					              			<?php	
+											}
+										?>
+						            </div><!-- /#owl-single-product-thumbnails -->
+								</div>
+							</div>
+						</div>       			
+						<div class='col-sm-6 col-md-7 product-info-block'>
+							<div class="product-info">
+								<h1 class="name"><?php echo $data[0]->ProductName; ?></h1>
+								
+								<div class="rating-reviews m-t-20">
+									<div class="row">
+										<div class="col-sm-3">
 											
 										</div>
-									</div>
+										<div class="col-sm-8">
+											<div class="reviews">
+											
+											</div>
+										</div>
+									</div><!-- /.row -->		
+								</div><!-- /.rating-reviews -->
 
-								</div><!-- /.row -->
-							</div><!-- /.price-container -->
+								<div class="stock-container info-container m-t-10">
+									<div class="row">
+										<div class="col-sm-2">
+											<div class="stock-box">
+												<span class="label">Availability :</span>
+											</div>	
+										</div>
+										<div class="col-sm-9">
+											<div class="stock-box">
+												<?php
+													$qtydata["ProductID"]=$_REQUEST["productid"];
+													$qtydisplay=$modal->display("tblsizexquantity",0,$qtydata,$connection);
+												?>
+												<span class="value"><?php if($qtydisplay !=0){echo "IN STOCK";} else{echo "OUT OF STOCK";}?></span>
+											</div>	
+										</div>
+									</div><!-- /.row -->	
+								</div><!-- /.stock-container -->
 
-							<div class="quantity-container info-container">
-								<div class="row">
-									
-									<div class="col-sm-2">
-										<span class="label">Qty :</span>
-									</div>
-									
-									<div class="col-sm-2">
-										<div class="cart-quantity">
-											<div class="quant-input">
-								                <div class="arrows">
-								                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-								                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
-								                </div>
-								                <input type="text" value="1">
-							              </div>
-							            </div>
-									</div>
+								
+								<div class="price-container info-container m-t-20">
+									<div class="row">
+										
 
-									<div class="col-sm-7">
-										<a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
-									</div>
+										<div class="col-sm-12">
+											<div class="price-box">
+												<span class="price"><?php echo $data[0]->SellingPrice.".00"?></span>
+												<span class="price-strike"><?php echo $data[0]->Cost?></span>
+												<span class="price pull-right" style="color:black;"><?php echo $data[0]->DiscountPercentage."% Discount"?></span>
+											</div>
+										</div>
 
-									
-								</div><!-- /.row -->
-							</div><!-- /.quantity-container -->
+										<div class="col-sm-12">
+											<div class="favorite-button m-t-10">
+												<form method="post">
+													<?php
+														if($wishdisplay ==0){
+														?>
+													<input type="submit" id="submitwishlist" name="wishlist" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" style="display:none;">
 
-							
+													<i class="fa fa-heart" style="font-size:25px;" onclick="document.getElementById('submitwishlist').click()"></i>
+													 <?php
+													}
+													else
+													{
+													?>
+														<i class="fa fa-heart fa-disabled" data-toggle="tooltip"
+														title="This Product Already In Wishlist" style="font-size: 25px;"></i>
+													<?php
+													}
+													?>
+												</form>
+											</div>
+										</div>
 
-							
+									</div><!-- /.row -->
+								</div><!-- /.price-container -->
 
-							
-						</div><!-- /.product-info -->
-					</div><!-- /.col-sm-7 -->
-				</div><!-- /.row -->
-                </div>
-				
+								<div class="quantity-container info-container">
+									<div class="row">
+										
+										<div class="col-sm-2">
+											<span class="label">Qty :</span>
+										</div>
+										
+										<div class="col-sm-2">
+											<div class="cart-quantity">
+												<div class="quant-input">
+									                <div class="arrows">
+									                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+									                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+									                </div>
+									                <input type="text" value="1">
+								              </div>
+								            </div>
+										</div>
+
+										<div class="col-sm-7">
+											<a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+										</div>
+
+										
+									</div><!-- /.row -->
+								</div><!-- /.quantity-container -->
+
+								
+
+								
+
+								
+							</div><!-- /.product-info -->
+						</div>
+					</div>
+	            </div>
 				<div class="product-tabs inner-bottom-xs  wow fadeInUp">
 					<div class="row">
 						<div class="col-sm-3">
 							<ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
 								<li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
-<!-- 								<li><a data-toggle="tab" href="#review">REVIEW</a></li>
+								<!--<li><a data-toggle="tab" href="#review">REVIEW</a></li>
 								<li><a data-toggle="tab" href="#tags">TAGS</a></li> -->
 							</ul><!-- /.nav-tabs #product-tabs -->
 						</div>
 						<div class="col-sm-9">
-
 							<div class="tab-content">
-								
 								<div id="description" class="tab-pane in active">
 									<div class="product-tab">
 										<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -751,467 +379,95 @@
 							</div><!-- /.tab-content -->
 						</div><!-- /.col -->
 					</div><!-- /.row -->
-				</div><!-- /.product-tabs -->
-
-				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
-<section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">upsell products</h3>
-	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
-	    	
+				</div>
+				<section class="section featured-product wow fadeInUp">
+					<h3 class="section-title">upsell products</h3>
+					<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
+        <?php
+            foreach($Product as $pd)
+                    {
+                    $jf=null;
+                    $tbl1=null;
+                    $field=null;
+                    $ImageData=null;
+                    $tbl1=array("tblproductimage");
+                    $field=array("ImageURL");
+                    $jf["ProductImageID"]="(select min(ProductImageID) from tblproductimage where ProductID=$pd->ProductID and ProductImageStatus=0)";  
+                    $ImageData=$modal->joinqry($tbl1,$field,$jf,$connection);
+        ?>            
 		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/products/p1.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			              
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
+			<div class="products">		
+	           <div class="product" style="height: 350px;">		
+            		<div class="product-image" style="height: 250px;width: 250px;">
+            			<div class="image">
+            				<a href="detail.php?productid=<?php echo $pd->ProductID ; ?>"><img  src="../src/images/products/<?php echo $ImageData[0]->ImageURL ; ?>" style="position: absolute; height:200px;width:auto;max-width: 100%" alt=""></a>
+            			</div><!-- /.image -->            		   
+            		</div><!-- /.product-image -->
+        		<div class="product-info text-left">
+        			<h3 class="name"><a href="detail.php?productid=<?php echo $pd->ProductID ; ?>""><?php echo $pd->ProductName ; ?></a></h3>
+        			<div class="rating rateit-small"></div>
+        			<div class="description"></div>
+                    <?php
+                    if($pd->DiscountPercentage != 0)
+                    {
+                    ?>    
+        			<div class="product-price">	
+        				<span class="price">
+        					&#8377;<?php echo $pd->SellingPrice ; ?>
+                        </span>
+        			    <span class="price-before-discount">
+                            &#8377;<?php echo $pd->Cost ; ?>
+                        </span>					
+        			</div><!-- /.product-price -->
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <div class="product-price"> 
+                        <span class="price">
+                            &#8377;<?php echo $pd->Cost ; ?>
+                        </span>                
+                    </div><!-- /.product-price -->
+                    <?php    
+                    }    
+                    ?>	
+        		</div><!-- /.product-info -->
+        		<div class="cart clearfix animate-effect">
+    				<div class="action">
+    					<ul class="list-unstyled">
+    						<li class="add-cart-button btn-group">
+    							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+    								<i class="fa fa-shopping-cart"></i>							
+    							</button>
+    							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>						
+    						</li>
+    		                <li class="lnk wishlist">
+    							<a class="add-to-cart" href="detail.php" title="Wishlist">
+    								 <i class="icon fa fa-heart"></i>
+    							</a>
+    						</li>
+    					</ul>
+    				</div><!-- /.action -->
+			    </div><!-- /.cart -->
+			    </div><!-- /.product -->
+		    </div><!-- /.products -->
 		</div><!-- /.item -->
-	
-		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/products/p2.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			                        		   
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-	
-		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/products/p3.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			                        
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-	
-		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/products/p4.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			                        		   
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-	
-		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/blank.gif" data-echo="assets/images/products/p5.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			                        <div class="tag hot"><span>hot</span></div>		   
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-	
-		<div class="item item-carousel">
-			<div class="products">
-				
-	<div class="product">		
-		<div class="product-image">
-			<div class="image">
-				<a href="detail.html"><img  src="assets/images/blank.gif" data-echo="assets/images/products/p6.jpg" alt=""></a>
-			</div><!-- /.image -->			
-
-			
-		</div><!-- /.product-image -->
-			
-		
-		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-			
-			<div class="description"></div>
-
-			<div class="product-price">	
-				<span class="price">
-					$650.99				</span>
-										     <span class="price-before-discount">$ 800</span>
-									
-			</div><!-- /.product-price -->
-			
-		</div><!-- /.product-info -->
-					<div class="cart clearfix animate-effect">
-				<div class="action">
-					<ul class="list-unstyled">
-						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
-							</button>
-							<button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-													
-						</li>
-	                   
-		                <li class="lnk wishlist">
-							<a class="add-to-cart" href="detail.html" title="Wishlist">
-								 <i class="icon fa fa-heart"></i>
-							</a>
-						</li>
-
-						
-					</ul>
-				</div><!-- /.action -->
-			</div><!-- /.cart -->
-			</div><!-- /.product -->
-      
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-			</div><!-- /.home-owl-carousel -->
-</section><!-- /.section -->
-<!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
-			
+        <?php
+            }
+        ?>  
+    </div><!-- /.home-owl-carousel -->
+				</section>
 			</div><!-- /.col -->
 			<div class="clearfix"></div>
 		</div><!-- /.row -->
-		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-
-	
-</div><!-- /.logo-slider -->
-<!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
-</div><!-- /.body-content -->
+	</div><!-- /.logo-slider -->
+</div>
 
 <!-- ============================================================= FOOTER ============================================================= -->
-<footer id="footer" class="footer color-bg">
-
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Contact Us</h4>
-                    </div><!-- /.module-heading -->
-
-                    <div class="module-body">
-        <ul class="toggle-footer" style="">
-            <li class="media">
-                <div class="pull-left">
-                     <span class="icon fa-stack fa-lg">
-                            <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
-                    </span>
-                </div>
-                <div class="media-body">
-                    <p>ThemesGround, 789 Main rd, Anytown, CA 12345 USA</p>
-                </div>
-            </li>
-
-              <li class="media">
-                <div class="pull-left">
-                     <span class="icon fa-stack fa-lg">
-                      <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                </div>
-                <div class="media-body">
-                    <p>+(888) 123-4567<br>+(888) 456-7890</p>
-                </div>
-            </li>
-
-              <li class="media">
-                <div class="pull-left">
-                     <span class="icon fa-stack fa-lg">
-                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                </div>
-                <div class="media-body">
-                    <span><a href="#">flipmart@themesground.com</a></span>
-                </div>
-            </li>
-              
-            </ul>
-    </div><!-- /.module-body -->
-                </div><!-- /.col -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Customer Service</h4>
-                    </div><!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                            <li class="first"><a href="#" title="Contact us">My Account</a></li>
-                <li><a href="#" title="About us">Order History</a></li>
-                <li><a href="#" title="faq">FAQ</a></li>
-                <li><a href="#" title="Popular Searches">Specials</a></li>
-                <li class="last"><a href="#" title="Where is my order?">Help Center</a></li>
-                        </ul>
-                    </div><!-- /.module-body -->
-                </div><!-- /.col -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Corporation</h4>
-                    </div><!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                          <li class="first"><a title="Your Account" href="#">About us</a></li>
-                <li><a title="Information" href="#">Customer Service</a></li>
-                <li><a title="Addresses" href="#">Company</a></li>
-                <li><a title="Addresses" href="#">Investor Relations</a></li>
-                <li class="last"><a title="Orders History" href="#">Advanced Search</a></li>
-                        </ul>
-                    </div><!-- /.module-body -->
-                </div><!-- /.col -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="module-heading">
-                        <h4 class="module-title">Why Choose Us</h4>
-                    </div><!-- /.module-heading -->
-
-                    <div class="module-body">
-                        <ul class='list-unstyled'>
-                            <li class="first"><a href="#" title="About us">Shopping Guide</a></li>
-                <li><a href="#" title="Blog">Blog</a></li>
-                <li><a href="#" title="Company">Company</a></li>
-                <li><a href="#" title="Investor Relations">Investor Relations</a></li>
-                <li class=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
-                        </ul>
-                    </div><!-- /.module-body -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="copyright-bar">
-        <div class="container">
-            <div class="col-xs-12 col-sm-6 no-padding social">
-                <ul class="link">
-                  <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
-                  <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
-                  <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
-                  <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
-                  <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
-                  <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
-                  <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6 no-padding">
-                <div class="clearfix payment-methods">
-                    <ul>
-                        <li><img src="assets/images/payments/1.png" alt=""></li>
-                        <li><img src="assets/images/payments/2.png" alt=""></li>
-                        <li><img src="assets/images/payments/3.png" alt=""></li>
-                        <li><img src="assets/images/payments/4.png" alt=""></li>
-                        <li><img src="assets/images/payments/5.png" alt=""></li>
-                    </ul>
-                </div><!-- /.payment-methods -->
-            </div>
-        </div>
-    </div>
-</footer>
+<?php 
+include_once("footer.php");
+?>
 <!-- ============================================================= FOOTER : END============================================================= -->
 
 
