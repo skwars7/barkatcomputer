@@ -78,11 +78,6 @@
           </a>
         </li>
         <li>
-          <a href="hotdeals.php">
-            <i class="fa fa-list "></i> <span>Manage Hotdeals</span>
-          </a>
-        </li>
-        <li>
           <a href="products.php">
             <i class="fa fa-list "></i> <span>Add Products</span>
           </a>

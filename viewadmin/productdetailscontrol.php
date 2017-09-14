@@ -4,19 +4,7 @@
 	//tbpproduct details..
 	$prodcond['ProductID']=$_REQUEST['pid'];
 	$uproduct=$modal->display("tblproduct",0,$prodcond,$connection);
-
-	//tblcolor details..
-	$tblcol=array("tblcolorxproduct cp","tblcolor c");
-	$colcond=array("cp.ProductID"=>$_REQUEST['pid'],"c.ColorID"=>"cp.ColorID");
-	$cXp=$modal->joinqry($tblcol,0,$colcond,$connection);
-	$col=$modal->display("tblcolor",0,0,$connection);
 	
-	//tbloccassion details..
-	$tblocc=array("tbloccassionxproduct op","tbloccassion o");
-	$occond=array("op.ProductID"=>$_REQUEST['pid'],"o.OccassionID"=>"op.OccassionID");
-	$oXp=$modal->joinqry($tblocc,0,$occond,$connection);
-	$occ=$modal->display("tbloccassion",0,0,$connection);
-
 	//tbldescription details..
 	$tbldesc=array("tblproductxdescription pd","tbldescription d");
 	$desccond=array("pd.ProductID"=>$_REQUEST['pid'],"d.DescriptionID"=>"pd.DescriptionID");
@@ -31,21 +19,6 @@
 		$prodnew=array("ProductName"=>$_REQUEST['prodname'],"Brand"=>$_REQUEST['brand'],"Cost"=>$_REQUEST['cost'],"DiscountPercentage"=>$_REQUEST['disper'],"DiscountAmount"=>$_REQUEST['disamt'],"SellingPrice"=>$_REQUEST['sellpr'],"AmendmentDateTime"=>$dt,"ProductStatus"=>$_REQUEST['status']);
 		$proddata['ProductID']=$_REQUEST['pid'];
 		$modal->update("tblproduct",$prodnew,$proddata,$connection);
-		header("location:productdetails.php?pid=".$_REQUEST['pid']);
-	}
-
-	if(isset($_REQUEST['updcolor']))
-	{
-		$colnew['ColorID']=$_REQUEST['color'];
-		$coldata['ProductID']=$_REQUEST['pid'];
-		$modal->update("tblcolorxproduct",$colnew,$coldata,$connection);
-		header("location:productdetails.php?pid=".$_REQUEST['pid']);
-	}
-	if(isset($_REQUEST['updocc']))
-	{
-		$occnew['OccassionID']=$_REQUEST['occ'];
-		$occdata['ProductID']=$_REQUEST['pid'];
-		$modal->update("tbloccassionxproduct",$occnew,$occdata,$connection);
 		header("location:productdetails.php?pid=".$_REQUEST['pid']);
 	}
 	if(isset($_REQUEST['upddesc']))

@@ -2,7 +2,7 @@
 	
 	include_once("../controller/controller.php");
 
-	$slider=$modal->display("tblmainslider","ImageURL",0,$connection);
+	$slider=$modal->display("tblhomeslider","ImageURL",0,$connection);
 	// print_r($slider);
 	// die();
 

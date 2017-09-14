@@ -1,8 +1,5 @@
 <?php
   include_once("header_cnt.php");
-
-?>
-
 ?>
 <style>
 	#demo1 , #demo15{

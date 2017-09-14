@@ -41,7 +41,6 @@
 
 	</head>
     <body class="cnt-home">
-		<!-- ============================================== HEADER ============================================== -->
 <?php
 include_once("header.php");
 ?>
@@ -375,21 +374,14 @@ include_once("header.php");
 						foreach($slider as $s)
 						{
 						?>	
-						<div class="item" style="background-image: url(assets/images/sliders/<?php echo $s->ImageURL ; ?>);">
+						<div class="item" style="background-image: url(../src/images/homeslider/<?php echo $s->ImageURL ; ?>);">
 							<div class="container-fluid">
 								<div class="caption bg-color vertical-center text-left">
-				                    <div class="slider-header fadeInDown-1">Top Brands</div>
 									<div class="big-text fadeInDown-1">
-										New Collections
+										<?php echo $s->Title ; ?>);
 									</div>
-
 									<div class="excerpt fadeInDown-2 hidden-xs">
-									
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-
-									</div>
-									<div class="button-holder fadeInDown-3">
-										<a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a>
+									<span><?php echo $s->Description ; ?>);</span>
 									</div>
 								</div><!-- /.caption -->
 							</div><!-- /.container-fluid -->

@@ -156,36 +156,6 @@ require_once 'productdetailscontrol.php';
               <!-- /.box-footer -->
             </form>
           </div>
-        <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Color</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Color</label>
-                  <div class="col-sm-10">
-                      <select name="color" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                      <?php 
-                        if(isset($col))
-                        { 
-                          foreach ($col as $c) {
-                      ?>
-                        <option value="<?php echo $c->ColorID ?>" <?php if($c->ColorName==$cXp[0]->ColorName) echo "Selected" ?>><?php echo $c->ColorName ?></option>
-                      <?php }}else echo "not found." ?>
-                      </select>
-                  </div>
-                </div>
-              </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <button type="submit" name="updcolor" class="btn btn-info pull-right">update Color</button>
-              </div>
-              <!-- /.box-footer -->
-            </form>
-          </div>
       </div>
       <div class="col-md-6">
           <div class="box box-info">
@@ -212,36 +182,6 @@ require_once 'productdetailscontrol.php';
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" name="upddesc" class="btn btn-info pull-right">Update Description</button>
-              </div>
-              <!-- /.box-footer -->
-            </form>
-          </div>
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Occassion</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal" method="post">
-              <div class="box-body">
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Occassion</label>
-                  <div class="col-sm-10">
-                      <select name="occ" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                      <?php 
-                        if(isset($occ))
-                        { 
-                          foreach ($occ as $o) {
-                      ?>
-                        <option value="<?php echo $o->OccassionID ?>" <?php if($o->OccassionID==$oXp[0]->OccassionID) echo "Selected" ?>><?php echo $o->OccassionName ?></option>
-                      <?php }} else echo "not found."?>
-                      </select>
-                  </div>
-                </div>
-              </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <button type="submit" name="updocc" class="btn btn-info pull-right">Update Occassion</button>
               </div>
               <!-- /.box-footer -->
             </form>
