@@ -1,0 +1,41 @@
+<?php
+	require_once '../controller/controller.php';
+	$tblsilder=$modal->display("tblcategoryslider",0,0,$connection);
+	$c=1;
+	foreach ($tblsilder as $val) {
+		$inarray[$c]=$val->CategoryID;
+		$c++;
+	}
+	$cond['CategoryStatus']=0;
+	$cat=$modal->display("tblcategory",0,$cond,$connection);
+	if(isset($_REQUEST['setcategory']))
+	{
+		if(!$_REQUEST['category']==0)
+		{
+			$catdata=array("CategoryID"=>$_REQUEST['category'],"CategorySliderStatus"=>0,"CreateDateTime"=>$dt,"AmendmentDateTime"=>$dt);
+			$modal->insert("tblcategoryslider",$catdata,$connection);
+			$id=$connection->insert_id;
+			$pcond['ProductStatus']=0;
+			$orderby[0]=array("ProductID");
+			$orderby[1]="desc";
+			$pcond['CategoryID']=$_REQUEST['category'];
+			$prod=$modal->display("tblproduct",0,$pcond,$connection,0,$orderby);
+			foreach ($prod as $p) {
+				$prodid[]=$p->ProductID;
+			}
+			for($i=0;$i<=2;$i++)
+			{
+				$ndata=array("CategorySliderID"=>$id,"ProductID"=>$prodid[$i],"Status"=>0,"CreateDateTime"=>$dt,"AmendmentDateTime"=>$dt);
+				$modal->insert("tblcategorysliderdetails",$ndata,$connection);
+			}
+			header("location:sliderproduct.php?prod=".$_REQUEST['category']);
+		}
+	}
+	if(isset($_REQUEST['btnblock']))
+	{
+		$newslide['CategorySliderStatus']=1;
+		$scond['CategorySliderID']=$_REQUEST['btnblock'];
+		$modal->update("tblcategoryslider",$newslide,$scond,$connection);
+		header("location:categoryslider.php");
+	}
+?>

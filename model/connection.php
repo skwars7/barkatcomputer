@@ -3,7 +3,7 @@
 	{
 		public function connect()
 		{
-			$con=new mysqli("localhost","root","","updateflipzia");
+			$con=new mysqli("localhost","root","","barkatdb");
 			return $con;
 		}
 	}

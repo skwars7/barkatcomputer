@@ -76,14 +76,14 @@
 				    <?php
 				    if(isset($_SESSION["UserID"])){
 				    ?>
-            <li><a href="myorders.php"><i class="icon fa fa-user"></i>My Orders</a></li>
-					  <li><a href="UserProfile.php"><i class="icon fa fa-user"></i>My Account</a></li>
+            <li><a href="myorders.php"  style="color:black"><i class="icon fa fa-user"></i>My Orders</a></li>
+					  <li><a href="UserProfile.php" style="color:black"><i class="icon fa fa-user"></i>My Account</a></li>
 					<?php
 			     	}
 			     	?>	
-					<li><a href="my-wishlist.php"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-					<li><a href="shopping-cart.php"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-					<li><a href="checkout.php"><i class="icon fa fa-check"></i>Checkout</a></li>
+					<li><a href="my-wishlist.php" style="color:black"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+					<li><a href="shopping-cart.php" style="color:black"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
+					<li><a href="checkout.php"  style="color:black"><i class="icon fa fa-check"></i>Checkout</a></li>
 					<li>
                     <?php
                     if(!isset($_SESSION['UserID'])){

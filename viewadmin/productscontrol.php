@@ -1,0 +1,13 @@
+<?php
+require_once("../controller/controller.php");
+$ccond['CategoryStatus']=0;
+$cat=$modal->display("tblcategory",0,$ccond,$connection);
+$scond['SubCategoryStatus']=0;
+$scat=$modal->display("tblsubcategory",0,$scond,$connection);
+if(isset($_REQUEST['btnnext']))
+{
+	$arr=array("prodname"=>$_REQUEST['prodname'],"brand"=>$_REQUEST['brand'],"cost"=>$_REQUEST['cost'],"disper"=>$_REQUEST['disper'],"disamt"=>$_REQUEST['disamt'],"sellpr"=>$_REQUEST['sellpr'],"prodstatus"=>0,"category"=>$_REQUEST['category'],"subcategory"=>$_REQUEST['subcategory']);
+	$_SESSION['prod_data']=serialize($arr);
+	header("location:productstep2.php");
+}
+?>

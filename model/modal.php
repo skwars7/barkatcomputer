@@ -83,7 +83,7 @@
 			$vvv=implode("','", $vv);
 			
 			$insQry="insert into $tbl ($kkk) values ('$vvv')";
-			//die($insQry);
+			echo $insQry;
 			//$conn->query($insQry);
 			return $conn->query($insQry);
 			

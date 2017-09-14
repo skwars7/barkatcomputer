@@ -67,14 +67,7 @@ include_once("detailcnt.php");
 <div class="body-content outer-top-xs">
 	<div class='container'>
 		<div class='row single-product'>
-			<div class='col-md-3 sidebar'>
-				<div class="sidebar-module-container">
-					<div class="home-banner outer-top-n">
-						<img src="assets/images/banners/LHS-banner.jpg" alt="Image">
-					</div>
-				</div>
-			</div><!-- /.sidebar -->
-			<div class='col-md-9'>
+			<div class='col-md-12'>
 	            <div class="detail-block">
 					<div class="row  wow fadeInUp">
 	                	<div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
@@ -82,7 +75,7 @@ include_once("detailcnt.php");
 								<div id="owl-single-product">
 									<div class="" id="slide1">
 						           		<a data-lightbox="image-2" data-title="Gallery" href="../src/images/products/<?php echo $data[0]->ImageURL ; ?>">
-						                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" style="height:280px; width: 200px; "/>
+						                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $data[0]->ImageURL ; ?>" style="/*height:280px; width: 200px;*/ "/>
 						                </a>
 						            </div>
 									<?php
@@ -92,7 +85,7 @@ include_once("detailcnt.php");
 											?>
 									            <div class="" id="<?php echo 'slide'.$i; ?>">
 									           		<a data-lightbox="<?php echo 'image-'.$i; ?>" data-title="Gallery" href="../src/images/products/<?php echo $d->ImageURL ; ?>">
-									                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $d->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $d->ImageURL ; ?>" style="height:280px; width: 200px; "/>
+									                    <img class="img-responsive" alt="" src="../src/images/products/<?php echo $d->ImageURL ; ?>" data-echo="../src/images/products/<?php echo $d->ImageURL ; ?>" style="/*height:280px; width: 200px;*/ "/>
 									                </a>
 									            </div>
 								            <?php
@@ -216,7 +209,9 @@ include_once("detailcnt.php");
 										</div>
 
 										<div class="col-sm-7">
-											<a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+											<form>
+    								<input type="submit" class="btn btn-primary cart-btn" name="addcart" id="addcart" value="Add to cart">						
+    							</form>
 										</div>
 
 										
@@ -329,7 +324,7 @@ include_once("detailcnt.php");
 
 															<div class="col-md-6">
 																<div class="form-group">
-																	<label for="exampleInputReview">Review <span class="astk">*</span></label>
+																		<label for="exampleInputReview">Review <span class="astk">*</span></label>
 																	<textarea class="form-control txt txt-review" id="exampleInputReview" rows="4" placeholder=""></textarea>
 																</div><!-- /.form-group -->
 															</div>
