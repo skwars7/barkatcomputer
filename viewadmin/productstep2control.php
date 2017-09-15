@@ -4,8 +4,6 @@ if(!isset($_SESSION['prod_data']))
     header("location:products.php");
 
 $attributes=$modal->display("tbldescription",0,0,$connection);
-$color=$modal->display("tblcolor",0,0,$connection);
-$occassion=$modal->display("tbloccassion",0,0,$connection);
 if (isset($_REQUEST['size'])) 
 {
 	if ($_REQUEST['size']=="5-16") { 

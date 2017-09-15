@@ -109,22 +109,6 @@
                   <input type="text" name="<?php echo $at->Attribute ?>" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $at->Attribute ?> Value">
                 </div>
               <?php } ?>
-                <div class="form-group">
-                  <label>Color</label>
-                  <select class="form-control select2" name="color" style="width: 100%;">
-                  <?php foreach ($color as $c) { ?>
-                    <option value="<?php echo $c->ColorID ?>" ><?php echo $c->ColorName ?></option>
-                  <?php } ?>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Occassion</label>
-                  <select class="form-control select2" name="occassion" style="width: 100%;">
-                    <?php foreach ($occassion as $o) { ?>
-                    <option value="<?php echo $o->OccassionID ?>"><?php echo $o->OccassionName ?></option>
-                  <?php } ?>
-                  </select>
-                </div>
                 <div class="form-group col-sm-12">
                   <div class="fileupload fileupload-new col-sm-3" data-provides="fileupload">
                     <span class="btn btn-primary btn-file"><span class="fileupload-new">Select Image</span>

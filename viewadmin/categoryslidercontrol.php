@@ -38,4 +38,11 @@
 		$modal->update("tblcategoryslider",$newslide,$scond,$connection);
 		header("location:categoryslider.php");
 	}
+	if(isset($_REQUEST['btnactive']))
+	{
+		$newslide['CategorySliderStatus']=0;
+		$scond['CategorySliderID']=$_REQUEST['btnactive'];
+		$modal->update("tblcategoryslider",$newslide,$scond,$connection);
+		header("location:categoryslider.php");
+	}
 ?>
