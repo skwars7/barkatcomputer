@@ -1,6 +1,5 @@
 <?php
   include_once("header_cnt.php");
-
 ?>
 <style>
 	#demo1 , #demo15{
@@ -53,7 +52,6 @@
    
      abc.open("GET","header_Cnt.php?checkmail="+a,true);
      abc.send();
-     //alert(a);
      abc.onreadystatechange=function() {
        if(abc.readyState==4 && abc.status==200)
        {
@@ -93,12 +91,12 @@
                     else
                     {
                     ?>
-		            <li class="dropdown" style="padding: 1em;"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $_SESSION["FirstName"];?><span class="caret"></span></a>
-	                   <ul class="dropdown-menu" style="padding: 1em;">
+		            <li class="dropdown" style="padding: 1em;"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:black"><?php echo $_SESSION["FirstName"];?><span class="caret"></span></a>
+	                   <ul class="dropdown-menu" style="positionadding: 1em;">
 	                       <li class="menu-item">
 	                          <form method="post">
 	                             <span>
-	                             <a href="logout.php">Logout</a>
+	                             <a href="logout.php" style="color:black">Logout</a>
 	                             </span>
 	                         </form>
 	                      </li>
@@ -252,7 +250,7 @@
 				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
 					<!-- ============================================================= LOGO ============================================================= -->
 					<div class="logo">
-						<a href="home.html" style="color: black;">
+						<a href="index.php" style="color: black;">
 							<span style="font-size:25px; color: black; font-family:sans-serif;">BarkatComputers</span>
 						</a>
 					</div>
@@ -260,16 +258,38 @@
 
 				<div class="col-xs-12 col-sm-12 col-md-2 pull-right animate-dropdown top-cart-row">
 					<div class="dropdown dropdown-cart">
-						<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown" style="color: black">
+						<a href="shopping-cart.php" class="dropdown-toggle lnk-cart" style="color: black">
 							<div class="items-cart-inner">
 				            <div class="basket">
 									<i class="glyphicon glyphicon-shopping-cart"></i>
 								</div>
-								<div class="basket-item-count"><span class="count">2</span></div>
+								<div class="basket-item-count"><span class="count"><?php 
+                  if(!empty($CartCount))
+                  { 
+                  echo $CartCount[0]->cnt;
+                  }
+                  else
+                  {
+                   echo "0" ; 
+                  } 
+                  ?></span></div>
 								<div class="total-price-basket">
 									<span class="lbl">cart -</span>
 									<span class="total-price">
-										<span class="sign" style="color: black">₹</span><span class="value" style="color: black">600.00</span>
+										<span class="sign" style="color: black">₹</span><span class="value" style="color: black"><?php
+                    if(!empty($displaycart))
+                    {
+                    $sum=0;
+                    foreach ($displaycart as $dc) {
+                      $sum+=$dc->SellingPrice;
+                    }
+                     echo $sum;
+                    }
+                    else
+                    {
+                      echo "0.00" ;
+                    }  
+                    ?></span>
 									</span>
 								</div>
 								
